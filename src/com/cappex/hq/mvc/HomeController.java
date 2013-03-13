@@ -26,9 +26,9 @@ public class HomeController {
 		return "home";
 	}
 
-	@RequestMapping("/students")
+	/*@RequestMapping("/students")
 	public String showStudents(Map<String, Object> model) {
 		model.put("students", studentCollegeService.getStudents());
 		return "home";
-	}
+	}*/
 }

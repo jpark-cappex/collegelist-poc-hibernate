@@ -15,4 +15,6 @@ public interface StudentCollegeDao {
 	List<College> getCollegesForStudent(long studentId);
 
 	List<Student> getStudents();
+
+	Student getStudent(long studentId);
 }

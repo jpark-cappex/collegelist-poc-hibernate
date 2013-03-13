@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="spring-poc-college-hibernate:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/spring_poc_college_hibernate_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="spring-poc-college-hibernate/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="spring-poc-college-hibernate" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="spring-3.2.1" />
+          <element id="library" level="project" name="spring-mvc-3.2.1.RELEASE" />
+          <element id="library" level="project" name="hibernate-4.1.1" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.23-bin" />
+          <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="aspectjrt" />
+          <element id="library" level="project" name="validation-api-1.0.0.GA" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="CollegeList" product="MySQL" version="5.5.27" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.23 ( Revision: ${bzr.revision-id} )" uuid="830feb60-7d6d-4bb3-971a-af8eb1b4f980">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/collegelist_poc</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfc9dfcbdfdadfdadfcfdfd2</user-password>
+    <schema-pattern>collegelist_poc.*</schema-pattern>
+    <default-schemas>collegelist_poc.*</default-schemas>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/../spitter-on-spring-2/web/WEB-INF/lib/mysql-connector-java-5.1.23-bin.jar!/</url>
+      </library>
+    </libraries>
+    <table name="colleges" schema="" catalog="collegelist_poc" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="college_name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="student_college" schema="" catalog="collegelist_poc" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="student_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="college_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="student_id_fk" columns="student_id" ref-table="students" ref-schema="" ref-catalog="collegelist_poc" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="college_id_fk" columns="college_id" ref-table="colleges" ref-schema="" ref-catalog="collegelist_poc" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+    </table>
+    <table name="students" schema="" catalog="collegelist_poc" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="first_name" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+  </data-source>
+</component>

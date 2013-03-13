@@ -36,4 +36,8 @@ public class StudentCollegeServiceImpl implements StudentCollegeService {
 	public List<Student> getStudents() {
 		return studentCollegeDao.getStudents();
 	}
+
+	public Student getStudent(long studentId) {
+		return studentCollegeDao.getStudent(studentId);
+	}
 }

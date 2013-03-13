@@ -14,4 +14,5 @@ import java.util.List;
 public interface StudentCollegeService {
 	List<College> getCollegesForStudent(long studentId);
 	List<Student> getStudents();
+	Student getStudent(long studentId);
 }

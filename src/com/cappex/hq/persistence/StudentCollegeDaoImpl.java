@@ -41,4 +41,8 @@ public class StudentCollegeDaoImpl implements StudentCollegeDao {
 				.addOrder(Order.asc("firstName"))
 				.list();
 	}
+
+	public Student getStudent(long studentId) {
+		return (Student) currentSession().get(Student.class, studentId);
+	}
 }
