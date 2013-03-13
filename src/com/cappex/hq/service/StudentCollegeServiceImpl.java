@@ -1,6 +1,7 @@
 package com.cappex.hq.service;
 
 import com.cappex.hq.domain.College;
+import com.cappex.hq.domain.Student;
 import com.cappex.hq.persistence.StudentCollegeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,5 +31,9 @@ public class StudentCollegeServiceImpl implements StudentCollegeService {
 
 	public List<College> getCollegesForStudent(long studentId) {
 		return studentCollegeDao.getCollegesForStudent(studentId);
+	}
+
+	public List<Student> getStudents() {
+		return studentCollegeDao.getStudents();
 	}
 }

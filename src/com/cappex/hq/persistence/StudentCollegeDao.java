@@ -1,6 +1,7 @@
 package com.cappex.hq.persistence;
 
 import com.cappex.hq.domain.College;
+import com.cappex.hq.domain.Student;
 
 import java.util.List;
 
@@ -12,4 +13,6 @@ import java.util.List;
  */
 public interface StudentCollegeDao {
 	List<College> getCollegesForStudent(long studentId);
+
+	List<Student> getStudents();
 }

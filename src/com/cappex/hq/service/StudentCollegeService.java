@@ -1,6 +1,7 @@
 package com.cappex.hq.service;
 
 import com.cappex.hq.domain.College;
+import com.cappex.hq.domain.Student;
 
 import java.util.List;
 
@@ -12,4 +13,5 @@ import java.util.List;
  */
 public interface StudentCollegeService {
 	List<College> getCollegesForStudent(long studentId);
+	List<Student> getStudents();
 }

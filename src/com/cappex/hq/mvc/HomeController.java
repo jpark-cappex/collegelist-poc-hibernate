@@ -22,7 +22,13 @@ public class HomeController {
 
 	@RequestMapping({"/", "/colleges"})
 	public String showCollegeList(Map<String, Object> model) {
-		model.put("studentColleges", studentCollegeService.getCollegesForStudent(1L));
+		model.put("colleges", studentCollegeService.getCollegesForStudent(1L));
+		return "home";
+	}
+
+	@RequestMapping("/students")
+	public String showStudents(Map<String, Object> model) {
+		model.put("students", studentCollegeService.getStudents());
 		return "home";
 	}
 }

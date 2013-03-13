@@ -12,12 +12,17 @@ import javax.persistence.*;
 @Entity
 @Table(name = "colleges")
 public class College {
-	private long id;
-	private String collegeName;
-
 	@Id
 	@GeneratedValue
-	@Column(name="id")
+	@Column(name = "id")
+	private long id;
+
+	@Column(name = "college_name")
+	private String collegeName;
+
+	/*@ManyToMany(mappedBy = "colleges", fetch = FetchType.EAGER)
+	private Set<Student> students = new HashSet<Student>();*/
+
 	public long getId() {
 		return id;
 	}
@@ -26,7 +31,6 @@ public class College {
 		this.id = id;
 	}
 
-	@Column(name="college_name")
 	public String getCollegeName() {
 		return collegeName;
 	}
@@ -34,4 +38,12 @@ public class College {
 	public void setCollegeName(String collegeName) {
 		this.collegeName = collegeName;
 	}
+
+	/*public Set<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(Set<Student> students) {
+		this.students = students;
+	}*/
 }
